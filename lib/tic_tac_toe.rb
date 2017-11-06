@@ -46,3 +46,17 @@ def turn(board)
   end
 end
 
+def won?(board)
+  WIN_COMBINATIONS.each do |x|
+    p1 = board[x[0]]
+    p2 = board[x[1]]
+    p3 = board[x[2]]
+    if p1 == "X" && p2 == "X" && p3 == "X"
+      return [x[0], x[1], x[2]]
+    elsif p1 == "O" && p2 == "O" && p3 == "O"
+      return [x[0], x[1], x[2]]
+    end
+  end
+  return false
+end
+
