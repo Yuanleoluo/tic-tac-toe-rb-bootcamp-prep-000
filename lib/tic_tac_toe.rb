@@ -144,3 +144,7 @@ def turn(a)
     turn(a)
   end
 end
+
+def play
+  
+end
