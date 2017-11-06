@@ -95,7 +95,6 @@ def over?(board)
   end
 end
 
-
 def winner(board)
   count_x = 0
   count_o = 0
@@ -113,5 +112,13 @@ def winner(board)
     "O"
   else
     nil
+  end
+end
+
+def play(a)
+  i=1
+  until i === 10
+    turn(a)
+    i+=1
   end
 end
