@@ -126,7 +126,7 @@ def turn(a)
   input = gets.strip
   b = input_to_index(input)
   if valid_move?(a, b)
-    move(a, b, value="X")
+    move(a, b, value)
     display_board(a)
   else
     turn(a)
