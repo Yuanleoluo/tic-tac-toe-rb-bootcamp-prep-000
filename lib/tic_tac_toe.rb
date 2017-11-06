@@ -133,6 +133,8 @@ def turn(a)
   end
 end
 
-def play
-
+def play(board)
+  until over?(board)
+    turn(board)
+  end
 end
