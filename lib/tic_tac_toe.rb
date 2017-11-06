@@ -69,3 +69,50 @@ def draw?(board)
     return false
   end
 end
+
+def full?(board)
+  board.each do |x|
+    if x == " "
+      return false
+    end
+  end
+  true
+end
+
+def draw?(board)
+  if full?(board) && !won?(board)
+    return true
+  elsif !won?(board) && !full?(board)
+    return false
+  elsif won?(board)
+    return false
+  end
+end
+
+def over?(board)
+  if full?(board) || draw?(board) || won?(board)
+    return true
+  end
+end
+
+
+def winner(board)
+  count_x = 0
+  count_o = 0
+  board.each do |x|
+    if x == "X"
+      count_x +=1
+    elsif x == "O"
+      count_o +=1
+    end
+  end
+
+  if won?(board) && count_x > count_o
+    "X"
+  elsif won?(board) && count_x < count_o
+    "O"
+  else
+    nil
+  end
+end
+
