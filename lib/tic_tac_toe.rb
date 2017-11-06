@@ -115,10 +115,4 @@ def winner(board)
   end
 end
 
-def play(a)
-  i=1
-  until i === 10
-    turn(a)
-    i+=1
-  end
-end
+
